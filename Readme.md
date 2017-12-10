@@ -144,7 +144,7 @@ FAQ
 ---
 
     Q: 为什么开发该项目？
-    A:Quartz 项目过于庞大，我并不需要; 讨厌年月颠倒的 cron 表达式; 练练手;
+    A: Quartz 项目过于庞大，我并不需要; 讨厌年月颠倒的 cron 表达式; 练练手;
 
 
 历史
@@ -153,7 +153,7 @@ FAQ
     Date       | Author      | Description
     ---------- | ----------- | ------------
     2017-11-28 | surfsky     | Init
-    2017-12-10 | surfsky     | 增加ExeJob, PerlJob,     PythonJob
+    2017-12-10 | surfsky     | 增加ApplicationJob, PerlJob, PythonJob
 
 开发计划
 --------
