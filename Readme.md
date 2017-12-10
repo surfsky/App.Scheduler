@@ -71,12 +71,12 @@
 内置的任务运行器
 ----------------
 
-    DummyJob   : 空任务，停X秒后返回true
-    RandomJob  : 随机任务，随机返回true、false，可用于测试任务依赖。
-    ConnectJob : 连接任务，可测试某个网站的可连接性
-    ExeJob     : 运行exe程序，若返回值大等于0，则返回true，
-    PerlJob    : 运行perl脚本，若返回值大等于0，则返回true，
-    PythonJob  : 运行python脚本，若返回值大等于0，则返回true，
+    DummyJob       : 空任务，停X秒后返回true
+    RandomJob      : 随机任务，随机返回true、false，可用于测试任务依赖。
+    ConnectJob     : 连接任务，可测试某个网站的可连接性
+    ApplicationJob : 运行exe程序，若返回值大等于0，则返回true，
+    PerlJob        : 运行perl脚本，若返回值大等于0，则返回true，
+    PythonJob      : 运行python脚本，若返回值大等于0，则返回true，
 
 Schedule.config 示例
 =====================================

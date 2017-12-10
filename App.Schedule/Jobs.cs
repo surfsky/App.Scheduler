@@ -52,8 +52,8 @@ namespace App.Schedule
         }
     }
 
-    /// <summary>Exe运行任务</summary>
-    public class ExeJob : IJobRunner
+    /// <summary>应用程序运行任务</summary>
+    public class ApplicationJob : IJobRunner
     {
         public bool Run(DateTime dt, string data)
         {
@@ -67,13 +67,13 @@ namespace App.Schedule
         }
     }
 
-    /// <summary>Perl脚本任务</summary>
+    /// <summary>Perl脚本任务。请预先配置好Perl程序的目录。</summary>
     public class PerlJob : IJobRunner
     {
         public bool Run(DateTime dt, string data)
         {
             var process = new Process();
-            process.StartInfo.FileName = "Perl.exe";
+            process.StartInfo.FileName = "Perl";
             process.StartInfo.Arguments = data;
             process.Start();
             process.WaitForExit();
@@ -81,13 +81,13 @@ namespace App.Schedule
         }
     }
 
-    /// <summary>Python脚本任务</summary>
+    /// <summary>Python脚本任务。请预先配置好Python程序的目录。</summary>
     public class PythonJob : IJobRunner
     {
         public bool Run(DateTime dt, string data)
         {
             var process = new Process();
-            process.StartInfo.FileName = "Python.exe";
+            process.StartInfo.FileName = "Python";
             process.StartInfo.Arguments = data;
             process.Start();
             process.WaitForExit();
