@@ -7,7 +7,7 @@ using App.Components;
 namespace App.Schedule
 {
     /// <summary>
-    /// 时间差表达式（弃用TimeSpan是因为只能设置天数，且不可以xml序列化）
+    /// 调度表达式：年 月 日 时 分 周
     /// </summary>
     [JsonConverter(typeof(ScheduleConverter))]
     public class Schedule
@@ -63,7 +63,7 @@ namespace App.Schedule
 
 
     /// <summary>
-    /// DateSpan 格式化转化器
+    /// 调度表达式格式化转化器
     /// </summary>
     public class ScheduleConverter : JsonConverter
     {
