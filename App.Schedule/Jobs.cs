@@ -62,8 +62,8 @@ namespace App.Schedule
             process.Exited += (sender, e) => {
             };
             process.Start();
-            return true;
-            //return process.ExitCode == 0;
+            process.WaitForExit();
+            return process.ExitCode == 0;
         }
     }
 
@@ -79,7 +79,8 @@ namespace App.Schedule
             process.Exited += (sender, e) => {
             };
             process.Start();
-            return true;
+            process.WaitForExit();
+            return process.ExitCode == 0;
         }
     }
 
@@ -95,7 +96,8 @@ namespace App.Schedule
             process.Exited += (sender, e) => {
             };
             process.Start();
-            return true;
+            process.WaitForExit();
+            return process.ExitCode == 0;
         }
     }
 

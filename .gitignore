@@ -2,3 +2,4 @@
 /App.Consoler/bin/Debug/*.pdb
 /App.Consoler/bin/Debug/Logs
 /App.Schedule/obj
+/App.Schedule/bin/Debug/App.Components.pdb
