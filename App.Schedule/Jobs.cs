@@ -36,7 +36,8 @@ namespace App.Schedule
     {
         public bool Run(DateTime dt, string data)
         {
-            Thread.Sleep(1000);
+            int seconds = data.IsNullOrEmpty() ? 1 : int.Parse(data);
+            Thread.Sleep(seconds*1000);
             return true;
         }
     }
@@ -59,11 +60,10 @@ namespace App.Schedule
             var process = new Process();
             process.StartInfo.FileName = data;
             process.EnableRaisingEvents = true;
-            process.Exited += (sender, e) => {
-            };
+            process.Exited += (sender, e) => {};
             process.Start();
             process.WaitForExit();
-            return process.ExitCode == 0;
+            return process.ExitCode >= 0;
         }
     }
 
@@ -75,12 +75,9 @@ namespace App.Schedule
             var process = new Process();
             process.StartInfo.FileName = "Perl.exe";
             process.StartInfo.Arguments = data;
-            process.EnableRaisingEvents = true;
-            process.Exited += (sender, e) => {
-            };
             process.Start();
             process.WaitForExit();
-            return process.ExitCode == 0;
+            return process.ExitCode >= 0;
         }
     }
 
@@ -92,12 +89,9 @@ namespace App.Schedule
             var process = new Process();
             process.StartInfo.FileName = "Python.exe";
             process.StartInfo.Arguments = data;
-            process.EnableRaisingEvents = true;
-            process.Exited += (sender, e) => {
-            };
             process.Start();
             process.WaitForExit();
-            return process.ExitCode == 0;
+            return process.ExitCode >= 0;
         }
     }
 

@@ -68,6 +68,15 @@
     运行App.Consoler.exe（或实现自己的宿主程序）
 
 
+内置的任务运行器
+----------------
+
+    DummyJob   : 空任务，停X秒后返回true
+    RandomJob  : 随机任务，随机返回true、false，可用于测试任务依赖。
+    ConnectJob : 连接任务，可测试某个网站的可连接性
+    ExeJob     : 运行exe程序，若返回值大等于0，则返回true，
+    PerlJob    : 运行perl脚本，若返回值大等于0，则返回true，
+    PythonJob  : 运行python脚本，若返回值大等于0，则返回true，
 
 Schedule.config 示例
 =====================================
@@ -76,7 +85,7 @@ Schedule.config 示例
 {
   "Sleep": 200,                                           // 任务引擎每次循环休息的毫秒数
   "LogDt": "2017-11-28 19:12:41",                         // 最后记录的时间
-  "Jobs": [                                              // 
+  "Jobs": [                                               // 任务列表
     {                                                     // 
       "Name": "任务",                                     // 任务名称
       "Enable": true,                                     // 是否有效
@@ -84,8 +93,8 @@ Schedule.config 示例
       "Status": "Success",                                // 最后运行状态
       "LastRunDt": "2017-11-28 19:12:17",                 // 最后运行时间
       "Success": "0000-00-00 00:00:10 0/9",               // 成功后间隔10秒钟再次运行
-      "Failure": "0000-00-00 00:00:02 3/9",               // 失败后间隔2秒钟再次运行，已失败3次，最多失败10次
-      "Runner": "App.Schedule.RandomJob, App.Schedule",  // IJobRunner 类型名，运行器的逻辑实现
+      "Failure": "0000-00-00 00:00:02 3/9",               // 失败后间隔2秒钟再次运行，已失败3次，最多失败9次
+      "Runner": "App.Schedule.RandomJob, App.Schedule",   // IJobRunner 类型名，运行器的逻辑实现
       "Data": "http://www.baidu.com",                     // 附加参数，供Runner运行时作为参数传入
       "Dependency": [
         {
