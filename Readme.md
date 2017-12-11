@@ -66,7 +66,7 @@
 ----
 
     运行App.Consoler.exe（或实现自己的宿主程序）
-
+    ![](./snap/App.Consoler.png)
 
 内置的任务运行器
 ----------------
