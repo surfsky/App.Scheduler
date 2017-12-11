@@ -31,7 +31,7 @@ namespace App.Schedule
         }
     }
 
-    /// <summary>空任务，休眠1秒</summary>
+    /// <summary>空任务，休眠 n 秒</summary>
     public class DummyJob : IJobRunner
     {
         public bool Run(DateTime dt, string data)

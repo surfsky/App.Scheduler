@@ -21,7 +21,13 @@ namespace App.Schedule
         private string _configFile;
 
         // 属性
-        public string Version { get { return ReflectionHelper.AssemblyVersion.ToString(); } }
+        public string Version
+        {
+            get
+            {
+                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            }
+        }
         public ScheduleConfig Config { get; set; }
         public int SaveSeconds { get; set; } = 60;
 

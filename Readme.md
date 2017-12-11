@@ -23,6 +23,11 @@
    - App.Consoler    内置调度引擎的控制台程序。输出 App.Consoler.exe
 
 
+Nuget
+--------
+    
+    install-package App.Schedule
+
 
 部署方法
 =====================================
@@ -150,15 +155,27 @@ FAQ
 历史
 ----
 
-    Date       | Author      | Description
-    ---------- | ----------- | ------------
-    2017-11-28 | surfsky     | Init
-    2017-12-10 | surfsky     | 增加ApplicationJob, PerlJob, PythonJob
+2017-11-28
+    Init
+
+2017-12-10
+    增加ApplicationJob, PerlJob, PythonJob
+
+2017-12-11
+    解除对App.Components的依赖，避免依赖问题
+
 
 开发计划
 --------
-    用线程或异步运行外部程序，成功后才返回true
-    Nuget 部署
+    /Nuget 部署 
+        https://github.com/NuGetPackageExplorer/NuGetPackageExplorer
+        Microsoft Store > NuGet Package Explorer
+        nuget setApiKey delete-8b490408-5a3c-4a67-b969-3cda4f074341
+        nuget spec, 生成并编辑 .nuspec 文件
+        nuget pack xxx.csproj, 生成 .nupkg 文件
+        nuget push xxx.nupkg, 发布
+
     Windows 服务程序
     Web版：用数据库存储Schedule，可视化编辑和跟踪任务状态
+    用线程或异步运行外部程序，成功后才返回true
 

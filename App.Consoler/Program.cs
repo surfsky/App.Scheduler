@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Runtime.InteropServices;
 using App.Schedule;
-using App.Components;
+using System.Reflection;
+using System.IO;
+//using App.Components;
 
 namespace App.Consoler
 {
@@ -16,10 +18,12 @@ namespace App.Consoler
     /// </summary>
     class Program
     {
-        //
+        // 调度引擎对象
         static ScheduleEngine engine;
 
+        //------------------------------------------------
         // 主入口
+        //------------------------------------------------
         static void Main(string[] args)
         {
             // 确保只有一个程序在运行
@@ -33,8 +37,10 @@ namespace App.Consoler
             //SetConsoleCtrlHandler(new AppQuitDelegate(AppQuit), true);
 
             // 开启任务引擎
-            Console.WriteLine("App.Schedule consoler {0}", ReflectionHelper.AssemblyVersion);
-            string configFile = string.Format("{0}\\schedule.config", ReflectionHelper.AssemblyDirectory);
+            var version = Assembly.GetExecutingAssembly().GetName().Version;
+            var folder = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
+            Console.WriteLine("App.Schedule consoler {0}", version);
+            string configFile = string.Format("{0}\\schedule.config", folder);
             engine = new ScheduleEngine(configFile);
             engine.ConfigFailure += (info) => Logger.Error("{0}", info);
             engine.TaskSuccess += (task, info) => Logger.Info("{0} {1} ok", task.Name, task.Data);

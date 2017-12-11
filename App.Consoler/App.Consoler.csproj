@@ -36,10 +36,6 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="App.Components, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\App.Schedule\bin\Debug\App.Components.dll</HintPath>
-    </Reference>
     <Reference Include="log4net">
       <HintPath>..\App\bin\log4net.dll</HintPath>
     </Reference>
