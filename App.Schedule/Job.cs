@@ -37,6 +37,29 @@ namespace App.Schedule
     }
 
     /// <summary>
+    /// Type 格式化转化器
+    /// </summary>
+    public class TypeConverter : JsonConverter
+    {
+        public override bool CanConvert(Type objectType)
+        {
+            return objectType == typeof(Type);
+        }
+
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            string name = reader.Value.ToString();
+            return Type.GetType(name);
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            Type type = (Type)value;
+            writer.WriteValue(string.Format("{0}, {1}", type.FullName, type.Assembly.GetName().Name));
+        }
+    }
+
+    /// <summary>
     /// 任务基类
     /// 参照 Quartz cron 表达式: https://yq.aliyun.com/articles/62723#_Toc465868115
     /// - 顺序调整为：年 月 日 时 分 周
@@ -66,17 +89,16 @@ namespace App.Schedule
         /// <summary>上次运行失败后，再次运行需要的时间间隔</summary>
         public DateSpan Failure { get; set; } = new DateSpan(0, 0, 0, 0, 5, 0, 0, 9);
 
-        /// <summary>依赖的前置任务（依赖任务全部完成后，本任务才运行）</summary>
-        public List<Job> Dependency { get; set; } = new List<Job>();
-
-
         //-------------------------------------------
         /// <summary>运行器的类型(ITaskRunner)</summary>
+        [JsonConverter(typeof(TypeConverter))]
         public Type Runner { get; set; }
 
         /// <summary>运行参数</summary>
         public string Data { get; set; }
 
+        /// <summary>依赖的前置任务（依赖任务全部完成后，本任务才运行）</summary>
+        public List<Job> Dependency { get; set; } = new List<Job>();
 
 
         //-------------------------------------------

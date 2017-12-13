@@ -33,6 +33,7 @@ namespace App.Schedule
 
         // 事件
         public event Action<string> ConfigFailure;
+        public event Action<ScheduleConfig> ConfigSave;
         public event TaskDelegate TaskRunning;
         public event TaskDelegate TaskSuccess;
         public event TaskDelegate TaskFailure;
@@ -116,6 +117,7 @@ namespace App.Schedule
                 {
                     Config.LogDt = now;
                     Config.Save();
+                    ConfigSave?.Invoke(this.Config);
                 }
                 Thread.Sleep(Config.Sleep);
             }

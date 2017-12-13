@@ -175,6 +175,8 @@ FAQ
    
 开发计划
 --------
+    Type不保存assembly version等信息，非常麻烦
+    配置保存事件
     Windows 服务程序
     Web版：用数据库存储Schedule，可视化编辑和跟踪任务状态
     用线程或异步运行外部程序，成功后才返回true

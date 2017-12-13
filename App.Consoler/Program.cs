@@ -43,6 +43,7 @@ namespace App.Consoler
             string configFile = string.Format("{0}\\schedule.config", folder);
             engine = new ScheduleEngine(configFile);
             engine.ConfigFailure += (info) => Logger.Error("{0}", info);
+            //engine.ConfigSave += (cfg) => cfg.Save();
             engine.TaskSuccess += (task, info) => Logger.Info("{0} {1} ok", task.Name, task.Data);
             engine.TaskFailure += (task, info) => Logger.Warn("{0} {1} fail, times={2}, info={3}", task.Name, task.Data, task.Failure.TryTimes, info);
             engine.Start();
