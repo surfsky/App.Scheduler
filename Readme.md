@@ -1,71 +1,67 @@
-﻿App.Scheduler 任务调度引擎
-=====================================
+# App.Scheduler 任务调度引擎
 
-功能
-----
 
-    - 调度表达式参照  cron
+## 1.功能
+
+
+- 调度表达式参照  cron
         * 顺序调整为：年 月 日 时 分 周
         * 每个部分可用逗号分隔
         * 只保留 * 符号
-    - 含依赖逻辑
-    - 含成功后重试逻辑（下次运行间隔）
-    - 含失败后重试逻辑（重试间隔、重试次数限制）
-    - 可以用配置文件，也可以完全用代码创建任务配置对象来运行任务。
-    - 任务包含 Data 属性，作为任务调用参数。如测试网站可访问性任务的URL，运行脚本任务的脚本路径等。
+- 含依赖逻辑
+- 含成功后重试逻辑（下次运行间隔）
+- 含失败后重试逻辑（重试间隔、重试次数限制）
+- 可以用配置文件，也可以完全用代码创建任务配置对象来运行任务。
+- 任务包含 Data 属性，作为任务调用参数。如测试网站可访问性任务的URL，运行脚本任务的脚本路径等。
 
 
-项目
-----
+## 2.项目
 
-   - App.Scheduler    调度引擎。输出 App.Scheduler.dll
-   - App.Consoler     内置调度引擎的控制台程序。输出 App.Consoler.exe
-
-
-Nuget
---------
-    
-    install-package App.Scheduler
+- App.Scheduler    调度引擎。输出 App.Scheduler.dll
+- App.Consoler     内置调度引擎的控制台程序。输出 App.Consoler.exe
 
 
-部署方法
-=====================================
+## 3.Nuget 安装
+```   
+install-package App.Scheduler
+```
 
-拷贝文件
---------
+## 4.使用
 
-    App.Scheduler.dll
-    Scheduler.config
-    Log4Net.dll
-    Newstonsoft.Json.dll
+### 拷贝文件
+```
+App.Scheduler.dll
+Scheduler.config
+Log4Net.dll
+Newstonsoft.Json.dll
+```
 
-实现任务逻辑
-------------
+### 实现任务逻辑
 
-    （1）引用App.Scheduler.dll
-    （2）实现接口 IJobRunner，实现任务处理逻辑
-        public class MyJob : IJobRunner
-        {
-            public bool Run(DateTime dt)
-            {
-                return true;
-            }
-        }
-            
+（1）引用App.Scheduler.dll
+（2）实现接口 IJobRunner，实现任务处理逻辑
+```
+public class MyJob : IJobRunner
+{
+    public bool Run(DateTime dt)
+    {
+       return true;
+    }
+}
+```            
 
-修改配置
---------
+### 配置
 
-    修改 Scheduler.config（详见后）
+用代码创建 ScheduleConfig 对象
+或修改 Scheduler.config json 文件（详见后）
 
-运行
-----
+### 运行
 
-    运行App.Consoler.exe（或实现自己的宿主程序）
-    ![](./snap/App.Consoler.png)
+运行App.Consoler.exe（或实现自己的宿主程序）
+![](./blob/master/Snap/Api.Consoler.png?raw=true)
 
-内置的任务运行器
-----------------
+
+## 5.内置的任务运行器
 
     DummyJob       : 空任务，停X秒后返回true
     RandomJob      : 随机任务，随机返回true、false，可用于测试任务依赖。
@@ -74,10 +70,8 @@ Nuget
     PerlJob        : 运行perl脚本，若返回值大等于0，则返回true，
     PythonJob      : 运行python脚本，若返回值大等于0，则返回true，
 
-Scheduler.config 示例
-=====================================
-
-~~~
+## 6. Scheduler.config 示例
+```
 {
   "Sleep": 200,                                           // 任务引擎每次循环休息的毫秒数
   "LogDt": "2017-11-28 19:12:41",                         // 最后记录的时间
@@ -130,47 +124,40 @@ Scheduler.config 示例
     }
   ]
 }
-~~~
+```
 
 
-其它
-=====================================
+## 7. FAQ
 
-FAQ
----
-
-    Q: 为什么开发该项目？
-    A: Quartz 项目过于庞大，我并不需要; 讨厌年月颠倒的 cron 表达式; 练练手;
+Q: 为什么开发该项目？
+A: Quartz 项目过于庞大，我并不需要; 讨厌年月颠倒的 cron 表达式; 练练手;
 
 
-历史
-----
+## 8.历史
 
-时间        |         操作
---------------------------------------------
-2017-11-28  | Init
-2017-12-10  | 增加ApplicationJob, PerlJob, PythonJob
-2017-12-11  | 解除对App.Components的依赖，避免依赖问题
-2017-12-12  | Nuget 部署: install-package App.Scheduler 
-2018-11-07  | 项目名称更名为 App.Scheduler, 所有Task字样更名为Job（请注意修改Schedule.config文件), 增加 ScheduleEngine.Version 属性
+- 2017-11-28  Init
+- 2017-12-10  增加ApplicationJob, PerlJob, PythonJob
+- 2017-12-11  解除对App.Components的依赖，避免依赖问题
+- 2017-12-12  Nuget 部署: install-package App.Scheduler 
+- 2018-11-07  项目名称更名为 App.Scheduler, 所有Task字样更名为Job（请注意修改Schedule.config文件), 增加 ScheduleEngine.Version 属性
    
 
 
-任务
---------
-    
+## 9.任务
 优化
-    - Job 增加 Id 属性，可被多任务共同依赖
-    - 用线程或异步运行外部程序，成功后才返回true
+
+- Job 增加 Id 属性，可被多任务共同依赖
+- 用线程或异步运行外部程序，成功后才返回true
 
 开发以下示例客户端
-    - Windows 客户端
-    - Web版：用数据库存储Schedule，可视化编辑和跟踪任务状态
-    - Windows 服务
+
+- Windows 客户端
+- Web版：用数据库存储Schedule，可视化编辑和跟踪任务状态
+- Windows 服务
 
 
-参考
-------
+## 10.参考
 
 - https://yq.aliyun.com/articles/62723#_Toc465868115
 - Nuget 开发
+
