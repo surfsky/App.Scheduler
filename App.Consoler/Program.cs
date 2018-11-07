@@ -6,10 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Runtime.InteropServices;
-using App.Schedule;
+using App.Scheduler;
 using System.Reflection;
 using System.IO;
-//using App.Components;
 
 namespace App.Consoler
 {
@@ -32,20 +31,23 @@ namespace App.Consoler
                 Console.WriteLine("本程序已有一个实例在运行。");
                 return;
             }
-
-            // 设置关闭事件
+            // 设置程序关闭事件（自动保存配置）：不稳定会报错
             //SetConsoleCtrlHandler(new AppQuitDelegate(AppQuit), true);
 
-            // 开启任务引擎
+            // Start
             var version = Assembly.GetExecutingAssembly().GetName().Version;
+            Console.WriteLine("App.Scheduler consoler {0}", version);
+            Console.WriteLine("Engine version {0}", App.Scheduler.ScheduleEngine.Version);
+
+            // 调度引擎
             var folder = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
-            Console.WriteLine("App.Schedule consoler {0}", version);
-            string configFile = string.Format("{0}\\schedule.config", folder);
+            string configFile = string.Format("{0}\\scheduler.config", folder);
             engine = new ScheduleEngine(configFile);
-            engine.ConfigFailure += (info) => Logger.Error("{0}", info);
+            engine.ConfigFailure += (info) => { Logger.Error("{0}", info); Console.ReadKey(); };
+            engine.JobRunning += (job, info) => Logger.Info("{0} {1} running", job.Name, job.Data);
+            engine.JobSuccess += (job, info) => Logger.Info("{0} {1} ok", job.Name, job.Data);
+            engine.JobFailure += (job, info) => Logger.Warn("{0} {1} fail, times={2}, info={3}", job.Name, job.Data, job.Failure.TryTimes, info);
             //engine.ConfigSave += (cfg) => cfg.Save();
-            engine.TaskSuccess += (task, info) => Logger.Info("{0} {1} ok", task.Name, task.Data);
-            engine.TaskFailure += (task, info) => Logger.Warn("{0} {1} fail, times={2}, info={3}", task.Name, task.Data, task.Failure.TryTimes, info);
             engine.Start();
         }
 

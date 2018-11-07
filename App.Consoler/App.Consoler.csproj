@@ -61,9 +61,9 @@
     <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\App.Schedule\App.Schedule.csproj">
+    <ProjectReference Include="..\App.Scheduler\App.Scheduler.csproj">
       <Project>{95636ae7-b639-41d5-a17b-8198204b6a06}</Project>
-      <Name>App.Schedule</Name>
+      <Name>App.Scheduler</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
