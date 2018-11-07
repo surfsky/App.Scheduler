@@ -58,7 +58,7 @@ public class MyJob : IJobRunner
 ### 运行
 
 运行App.Consoler.exe（或实现自己的宿主程序）
-![](./blob/master/Snap/Api.Consoler.png?raw=true)
+![](./Snap/Api.Consoler.png?raw=true)
 
 
 ## 5.内置的任务运行器
@@ -129,8 +129,8 @@ public class MyJob : IJobRunner
 
 ## 7. FAQ
 
-Q: 为什么开发该项目？
-A: Quartz 项目过于庞大，我并不需要; 讨厌年月颠倒的 cron 表达式; 练练手;
+- Q: 为什么开发该项目？
+- A: Quartz 项目过于庞大，我并不需要; 讨厌年月颠倒的 cron 表达式; 练练手;
 
 
 ## 8.历史
@@ -159,5 +159,5 @@ A: Quartz 项目过于庞大，我并不需要; 讨厌年月颠倒的 cron 表�
 ## 10.参考
 
 - https://yq.aliyun.com/articles/62723#_Toc465868115
-- Nuget 开发
+- 用Nuget部署程序包：https://www.cnblogs.com/surfsky/p/8072993.html
 
