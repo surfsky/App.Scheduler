@@ -27,6 +27,7 @@ namespace App.Scheduler
         Failure
     }
 
+    /*
     /// <summary>
     /// 任务参数
     /// </summary>
@@ -35,6 +36,7 @@ namespace App.Scheduler
         public DateTime Dt { get; set; }
         public string Data { get; set; }
     }
+    */
 
 
     /// <summary>

@@ -39,10 +39,9 @@ namespace App.Consoler
             Console.WriteLine("App.Scheduler consoler {0}", version);
             Console.WriteLine("Engine version {0}", App.Scheduler.ScheduleEngine.Version);
 
-            // 调度引擎
-            var folder = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
-            string configFile = string.Format("{0}\\scheduler.config", folder);
-            engine = new ScheduleEngine(configFile);
+            // Engine
+            //engine = CreateEngine();
+            engine = CreateEngineFromConfig();
             engine.ConfigFailure += (info) => { Logger.Error("{0}", info); Console.ReadKey(); };
             engine.JobRunning += (job, info) => Logger.Info("{0} {1} running", job.Name, job.Data);
             engine.JobSuccess += (job, info) => Logger.Info("{0} {1} ok", job.Name, job.Data);
@@ -50,6 +49,35 @@ namespace App.Consoler
             //engine.ConfigSave += (cfg) => cfg.Save();
             engine.Start();
         }
+
+
+        /// <summary>用代码构建引擎对象</summary>
+        static ScheduleEngine CreateEngine()
+        {
+            ScheduleConfig cfg = new ScheduleConfig();
+            cfg.LogDt = DateTime.Now;
+            cfg.Sleep = 200;
+            cfg.Jobs = new List<Job>();
+            cfg.Jobs.Add(new Job()
+            {
+                 Data = "http://www.baidu.com",
+                 Runner = typeof(ConnectJob),
+                 Name = "Connect",
+                 Success = new DateSpan(0, 0, 0, 0, 0, 30),
+                 Failure = new DateSpan(0, 0, 0, 0, 0, 0, 0, 9),
+                 Schedule = new Schedule("* * * * * *")
+            });
+            return new ScheduleEngine(cfg);
+        }
+
+        /// <summary>从配置中构建引擎对象</summary>
+        private static ScheduleEngine CreateEngineFromConfig()
+        {
+            var folder = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
+            string configFile = string.Format("{0}\\scheduler.config", folder);
+            return new ScheduleEngine(configFile);
+        }
+
 
 
         // 是否已经存在进程实例

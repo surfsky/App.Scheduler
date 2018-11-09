@@ -12,12 +12,15 @@ namespace App.Scheduler
     {
         /// <summary>每次循环休眠毫秒数</summary>
         public int Sleep { get; set; }
+        /// <summary>最后日志时间</summary>
         public DateTime LogDt { get; set; }
+        /// <summary>任务</summary>
         public List<Job> Jobs { get; set; }
 
-        // 单例
-        static string _configFile;
+        //
+        string _configFile;
 
+        // 构造
         public ScheduleConfig() { }
         public ScheduleConfig(string configFile)
         {

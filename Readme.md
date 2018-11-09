@@ -1,13 +1,13 @@
-# App.Scheduler 任务调度引擎
+﻿# App.Scheduler 任务调度引擎
 
 
 ## 1.功能
 
 
 - 调度表达式参照  cron
-        * 顺序调整为：年 月 日 时 分 周
-        * 每个部分可用逗号分隔
-        * 只保留 * 符号
+    (1) 顺序调整为：年 月 日 时 分 周
+    (2) 每个部分可用逗号分隔
+    (3) 只保留 * 通配符
 - 含依赖逻辑
 - 含成功后重试逻辑（下次运行间隔）
 - 含失败后重试逻辑（重试间隔、重试次数限制）
@@ -39,11 +39,11 @@ Newstonsoft.Json.dll
 ### 实现任务逻辑
 
 （1）引用App.Scheduler.dll
-（2）实现接口 IJobRunner，实现任务处理逻辑
+（2）实现接口 IJobRunner（或继承Job)，实现任务处理逻辑
 ```
 public class MyJob : IJobRunner
 {
-    public bool Run(DateTime dt)
+    public bool Run(DateTime dt, string data)
     {
        return true;
     }
@@ -58,7 +58,7 @@ public class MyJob : IJobRunner
 ### 运行
 
 运行App.Consoler.exe（或实现自己的宿主程序）
-![](./Snap/Api.Consoler.png?raw=true)
+![](./Snap/App.Consoler.png?raw=true)
 
 
 ## 5.内置的任务运行器
@@ -125,25 +125,64 @@ public class MyJob : IJobRunner
   ]
 }
 ```
+## 7. 实现自己的宿主程序
 
+参考 App.Consoler 项目，其核心代码如下：
+```
+//var engine = CreateEngine();
+var engine = CreateEngineFromConfig();
+engine.ConfigFailure += (info) => { Logger.Error("{0}", info); Console.ReadKey(); };
+engine.JobRunning += (job, info) => Logger.Info("{0} {1} running", job.Name, job.Data);
+engine.JobSuccess += (job, info) => Logger.Info("{0} {1} ok", job.Name, job.Data);
+engine.JobFailure += (job, info) => Logger.Warn("{0} {1} fail, times={2}, info={3}", job.Name, job.Data, job.Failure.TryTimes, info);
+engine.Start();
 
-## 7. FAQ
+/// <summary>用代码构建引擎对象</summary>
+static ScheduleEngine CreateEngine()
+{
+    ScheduleConfig cfg = new ScheduleConfig();
+    cfg.LogDt = DateTime.Now;
+    cfg.Sleep = 200;
+    cfg.Jobs = new List<Job>();
+    cfg.Jobs.Add(new Job()
+    {
+            Data = "http://www.baidu.com",
+            Runner = typeof(ConnectJob),
+            Name = "Connect",
+            Success = new DateSpan(0, 0, 0, 0, 0, 30),
+            Failure = new DateSpan(0, 0, 0, 0, 0, 0, 0, 9),
+            Schedule = new Schedule("* * * * * *")
+    });
+    return new ScheduleEngine(cfg);
+}
+
+/// <summary>从配置中构建引擎对象</summary>
+private static ScheduleEngine CreateEngineFromConfig()
+{
+    var folder = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
+    string configFile = string.Format("{0}\\scheduler.config", folder);
+    return new ScheduleEngine(configFile);
+}
+```
+
+## 8. FAQ
 
 - Q: 为什么开发该项目？
 - A: Quartz 项目过于庞大，我并不需要; 讨厌年月颠倒的 cron 表达式; 练练手;
 
 
-## 8.历史
+## 9.历史
 
 - 2017-11-28  Init
 - 2017-12-10  增加ApplicationJob, PerlJob, PythonJob
 - 2017-12-11  解除对App.Components的依赖，避免依赖问题
 - 2017-12-12  Nuget 部署: install-package App.Scheduler 
 - 2018-11-07  项目名称更名为 App.Scheduler, 所有Task字样更名为Job（请注意修改Schedule.config文件), 增加 ScheduleEngine.Version 属性
-   
+- 2018-11-08  增加手动创建配置的示例
 
 
-## 9.任务
+
+## 10.任务
 优化
 
 - Job 增加 Id 属性，可被多任务共同依赖
@@ -156,8 +195,9 @@ public class MyJob : IJobRunner
 - Windows 服务
 
 
-## 10.参考
+## 11.参考
 
-- https://yq.aliyun.com/articles/62723#_Toc465868115
+- CRON表达式： https://yq.aliyun.com/articles/62723#_Toc465868115
 - 用Nuget部署程序包：https://www.cnblogs.com/surfsky/p/8072993.html
+
 
