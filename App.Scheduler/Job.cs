@@ -130,7 +130,7 @@ namespace App.Scheduler
     {
         public override bool CanConvert(Type objectType)
         {
-            return objectType == typeof(Type);
+            return objectType.FullName == "System.RuntimeType";
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
