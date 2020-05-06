@@ -23,7 +23,8 @@
 
 ## 3.Nuget 安装
 ```   
-install-package App.Scheduler
+install-package App.Scheduler        // netframework 4.5 版本
+install-package App.SchedulerStd     // netstandard 2.0 版本
 ```
 
 ## 4.使用
