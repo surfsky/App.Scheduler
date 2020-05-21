@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.SchedulerStd", "App.SchedulerStd\App.SchedulerStd.csproj", "{7C81AB09-517D-4331-B71C-35C782861053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.SchedulerStd", "App.SchedulerStd\App.SchedulerStd.csproj", "{7C81AB09-517D-4331-B71C-35C782861053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.ConsolerCore", "App.ConsolerCore\App.ConsolerCore.csproj", "{8E6CEC54-7A40-43B6-A86C-DEC1C3BFB4A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.ConsolerCore", "App.ConsolerCore\App.ConsolerCore.csproj", "{8E6CEC54-7A40-43B6-A86C-DEC1C3BFB4A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
