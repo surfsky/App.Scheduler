@@ -120,8 +120,7 @@ namespace App.Scheduler
         }
 
         // 无限循环
-        // 无限循环
-        protected void Loop()
+        void Loop()
         {
             while (_running)
             {

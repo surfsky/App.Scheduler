@@ -17,18 +17,8 @@ namespace App.Scheduler
     {
         public bool Run(DateTime dt, string data)
         {
-            try
-            {
-                Thread.Sleep(5000);
-                var txt = JobContext.Current["name"];
-                Console.WriteLine("Read JobContext name=" + txt);
-                HttpHelper.Get(data);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            HttpHelper.Get(data);
+            return true;
         }
     }
 
