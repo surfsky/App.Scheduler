@@ -174,6 +174,40 @@ private static ScheduleEngine CreateEngineFromConfig()
 }
 ```
 
+## 8. 数据库上下文如何处理
+
+
+在Aspnet 程序中，DbContext 一般保存在 HttpContext中，在请求来时开启，在请求结束后释放
+参照同样的原理，我们在 1.2.1 版本中提供了 JobContext 对象。
+
+- JobContext 会在 Job 运行时分配一个字典（类似 HttpContext)。
+- 我们可以在 JobRunning 事件中生成 DbContext 对象，并插入到 JobContext 中；
+- 并在 JobFinish 事件中，读取 JobContext 并释放 DbContext 对象。
+- 以这种方式让数据库上下文自动生成和释放。
+
+``` csharp
+
+UtilConfig.Instance.MachineId = IO.GetAppSetting<int>("MachineID");
+EntityConfig.Instance.OnGetDb += () => JobContext.Current["db"] as AppContext;
+var engine = CreateEngine();
+engine.JobRunning += (job, info, _) =>
+{
+    JobContext.Current["db"] = new AppContext();
+    Logger.Info("{0} {1}", job.Name, job.Data);
+};
+engine.JobFinish += (job, info, success) =>
+{
+    if (success)
+        Logger.Info(@"{0} {1} √", job.Name, job.Data);
+    else
+        Logger.Warn(@"{0} {1} ×, times={2}, info={3}", job.Name, job.Data, job.Failure.TryTimes, info);
+    (JobContext.Current["db"] as AppContext).Dispose();
+};
+engine.Start();
+```
+
+
+
 ## 8. FAQ
 
 - Q: 为什么开发该项目？
