@@ -1,0 +1,35 @@
+2017-12-11 08:42:33,286 [3] INFO  Consoler - Logger start
+2017-12-11 08:42:33,309 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-11 08:42:37,315 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-11 08:42:39,599 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-11 08:42:39,602 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-11 08:42:39,904 [3] INFO  Consoler - 子任务1  ok
+2017-12-11 08:42:39,905 [3] INFO  Consoler - 子任务2  ok
+2017-12-11 08:42:39,909 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-11 08:42:41,916 [3] INFO  Consoler - 父任务  ok
+2017-12-11 08:42:51,944 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-11 08:42:53,950 [3] WARN  Consoler - 子任务1  fail, times=2, info=
+2017-12-11 08:42:55,959 [3] INFO  Consoler - 子任务1  ok
+2017-12-11 08:42:55,959 [3] INFO  Consoler - 子任务2  ok
+2017-12-11 08:42:55,960 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-11 08:42:57,966 [3] WARN  Consoler - 父任务  fail, times=2, info=
+2017-12-11 08:42:59,974 [3] INFO  Consoler - 父任务  ok
+2017-12-11 08:43:03,229 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-11 08:43:07,231 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-11 08:43:10,040 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-11 11:03:31,953 [3] INFO  Consoler - Logger start
+2017-12-11 11:03:31,967 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-11 11:04:09,042 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-11 11:04:30,866 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-11 11:04:30,881 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-11 11:04:31,292 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-11 11:04:49,405 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-11 11:04:49,405 [3] INFO  Consoler - 子任务1  ok
+2017-12-11 11:04:49,406 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-11 11:04:51,281 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-11 11:04:51,283 [3] INFO  Consoler - 子任务1  ok
+2017-12-11 11:04:51,283 [3] INFO  Consoler - 子任务2  ok
+2017-12-11 11:04:51,283 [3] INFO  Consoler - 父任务  ok
+2017-12-11 17:36:30,552 [3] INFO  Consoler - Logger start
+2017-12-11 17:36:30,582 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-11 17:36:34,588 [3] INFO  Consoler - 睡一会 4 ok

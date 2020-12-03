@@ -13,7 +13,8 @@
 - 含失败后重试逻辑（重试间隔、重试次数限制）
 - 可以用配置文件，也可以完全用代码创建任务配置对象来运行任务。
 - 任务包含 Data 属性，作为任务调用参数。如测试网站可访问性任务的URL，运行脚本任务的脚本路径等。
-
+- 任务采用线程启动
+- 支持任务上下文变量 JobContext，任务启动时创建，任务释放时自动释放。
 
 ## 2.项目
 
@@ -130,13 +131,20 @@ public class MyJob : IJobRunner
 
 参考 App.Consoler 项目，其核心代码如下：
 ```
-//var engine = CreateEngine();
-var engine = CreateEngineFromConfig();
+engine = CreateEngine();
 engine.ConfigFailure += (info) => { Logger.Error("{0}", info); Console.ReadKey(); };
-engine.JobRunning += (job, info) => Logger.Info("{0} {1} running", job.Name, job.Data);
-engine.JobSuccess += (job, info) => Logger.Info("{0} {1} ok", job.Name, job.Data);
-engine.JobFailure += (job, info) => Logger.Warn("{0} {1} fail, times={2}, info={3}", job.Name, job.Data, job.Failure.TryTimes, info);
-engine.Start();
+engine.JobRunning += (job, info, _) =>
+{
+    JobContext.Current["name"] = "hello";
+    Logger.Info("{0} {1}", job.Name, job.Data);
+};
+engine.JobFinish += (job, info, success) =>
+{
+    if (success)
+        Logger.Info(@"{0} {1} √", job.Name, job.Data);
+    else
+        Logger.Warn(@"{0} {1} ×, times={2}, info={3}", job.Name, job.Data, job.Failure.TryTimes, info);
+};
 
 /// <summary>用代码构建引擎对象</summary>
 static ScheduleEngine CreateEngine()
@@ -180,20 +188,9 @@ private static ScheduleEngine CreateEngineFromConfig()
 - 2017-12-12  Nuget 部署: install-package App.Scheduler 
 - 2018-11-07  项目名称更名为 App.Scheduler, 所有Task字样更名为Job（请注意修改Schedule.config文件), 增加 ScheduleEngine.Version 属性
 - 2018-11-08  增加手动创建配置的示例
+- 2020-12-03  采用线程运行任务；增加 JobContext 对象，用于在 Job 运行时中使用
 
 
-
-## 10.任务
-优化
-
-- Job 增加 Id 属性，可被多任务共同依赖
-- 用线程或异步运行外部程序，成功后才返回true
-
-开发以下示例客户端
-
-- Windows 客户端
-- Web版：用数据库存储Schedule，可视化编辑和跟踪任务状态
-- Windows 服务
 
 
 ## 11.参考

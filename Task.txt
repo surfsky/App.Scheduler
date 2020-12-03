@@ -1,0 +1,46 @@
+﻿---------------------------------------------
+任务
+---------------------------------------------
+用 ShareProject 的方式共享代码
+用线程或异步运行外部程序，成功后才返回true
+
+开发以下客户端
+    - Web 客户端，可集成在 AppPlat
+    - Windows 客户端
+    - Web版：用数据库存储Schedule，可视化编辑和跟踪任务状态
+    - Windows 服务
+
+
+---------------------------------------------
+完成
+---------------------------------------------
+2020-12-03
+    /任务上下文 JobContext.Get("db", ()=>....);
+    /Job 增加 Id 属性，可被多任务共同依赖
+    /删除 JobSuccess, JobFailure 事件
+    /创建 JobFinish 事件
+
+
+
+---------------------------------------------
+code
+---------------------------------------------
+        /// <summary>上下文字典</summary>
+        //public Dictionary<string, object> Dict { get; set; } = new Dictionary<string, object>();
+
+                /// <summary>Job success event</summary>
+        public event JobDelegate JobSuccess;
+
+        /// <summary>Job failure event</summary>
+        public event JobDelegate JobFailure;
+
+                    //engine.JobSuccess += (job, info) => Logger.Info("{0} {1} success", job.Name, job.Data);
+            //engine.JobFailure += (job, info) => Logger.Warn("{0} {1} fail, times={2}, info={3}", job.Name, job.Data, job.Failure.TryTimes, info);
+
+
+
+                            //var thread = new Thread(() => RunJob(job));
+                //thread.Start();
+                //thread.Join();
+                //var task = Task.Run(() => RunJob(job));
+                //task.Wait();

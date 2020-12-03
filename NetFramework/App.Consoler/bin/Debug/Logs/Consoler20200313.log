@@ -1,0 +1,19 @@
+2020-03-13 15:29:58,105 [3] INFO  Consoler - Logger start
+2020-03-13 15:29:58,116 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ running
+2020-03-13 15:29:59,231 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2020-03-13 15:29:59,232 [3] INFO  Consoler - 睡一会 4 running
+2020-03-13 15:30:03,234 [3] INFO  Consoler - 睡一会 4 ok
+2020-03-13 15:30:03,235 [3] INFO  Consoler - 运行外部程序 notepad.exe running
+2020-03-13 15:30:06,570 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2020-03-13 15:30:06,571 [3] INFO  Consoler - 父任务  running
+2020-03-13 15:30:06,573 [3] INFO  Consoler - 子任务1  running
+2020-03-13 15:30:06,573 [3] INFO  Consoler - 子任务1  ok
+2020-03-13 15:30:06,574 [3] INFO  Consoler - 子任务2  running
+2020-03-13 15:30:06,575 [3] INFO  Consoler - 子任务2  ok
+2020-03-13 15:30:06,576 [3] INFO  Consoler - 父任务  ok
+2020-03-13 15:30:07,851 [3] INFO  Consoler - 父任务  running
+2020-03-13 15:30:07,852 [3] INFO  Consoler - 子任务1  running
+2020-03-13 15:30:07,852 [3] INFO  Consoler - 子任务1  ok
+2020-03-13 15:30:07,853 [3] INFO  Consoler - 子任务2  running
+2020-03-13 15:30:07,854 [3] INFO  Consoler - 子任务2  ok
+2020-03-13 15:30:07,854 [3] INFO  Consoler - 父任务  ok

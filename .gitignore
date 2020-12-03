@@ -7,3 +7,7 @@
 /App.Scheduler/bin/Debug/*.pdb
 /App.SchedulerStd/obj
 /App.ConsolerCore/obj
+/NetCore/App.ConsolerCore/obj
+/NetCore/App.SchedulerStd/obj
+/NetFramework/App.Consoler/obj/Debug
+/NetFramework/App.Scheduler/obj/Debug

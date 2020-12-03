@@ -1,0 +1,119 @@
+2017-12-13 22:49:55,267 [3] INFO  Consoler - Logger start
+2017-12-13 22:49:55,342 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:49:59,350 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-13 22:50:02,459 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-13 22:50:02,481 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-13 22:50:54,323 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:50:58,368 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-13 22:50:58,368 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-13 22:52:04,535 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-13 22:52:04,537 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:52:04,538 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:52:04,538 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:52:26,383 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:52:30,451 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-13 22:52:32,260 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-13 22:52:32,664 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-13 22:52:32,932 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:52:32,955 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-13 22:52:34,972 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:52:34,975 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:52:45,072 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:52:45,074 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:52:45,075 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-13 22:52:47,087 [3] WARN  Consoler - 父任务  fail, times=2, info=
+2017-12-13 22:52:49,094 [3] WARN  Consoler - 父任务  fail, times=3, info=
+2017-12-13 22:52:51,120 [3] WARN  Consoler - 父任务  fail, times=4, info=
+2017-12-13 22:52:53,131 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:52:56,411 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:53:00,413 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-13 22:53:03,228 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-13 22:53:05,239 [3] WARN  Consoler - 子任务1  fail, times=2, info=
+2017-12-13 22:53:07,388 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:53:07,394 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-13 22:53:09,421 [3] WARN  Consoler - 子任务2  fail, times=2, info=
+2017-12-13 22:53:11,447 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:53:11,449 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-13 22:53:13,457 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:53:23,538 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:53:23,540 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:53:23,542 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:53:29,045 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-13 22:53:29,286 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:53:33,295 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-13 22:53:33,697 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-13 22:53:35,712 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:53:35,716 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:53:35,717 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:53:45,818 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:53:45,818 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-13 22:53:47,908 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:53:47,910 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-13 22:53:49,925 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:53:59,465 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:54:03,467 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-13 22:54:03,670 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-13 22:54:05,706 [3] WARN  Consoler - 子任务1  fail, times=2, info=
+2017-12-13 22:54:07,715 [3] WARN  Consoler - 子任务1  fail, times=3, info=
+2017-12-13 22:54:09,761 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:54:09,763 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-13 22:54:11,828 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:54:11,829 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-13 22:54:13,866 [3] WARN  Consoler - 父任务  fail, times=2, info=
+2017-12-13 22:54:15,875 [3] WARN  Consoler - 父任务  fail, times=3, info=
+2017-12-13 22:54:17,891 [3] WARN  Consoler - 父任务  fail, times=4, info=
+2017-12-13 22:54:19,900 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-13 22:54:21,911 [3] WARN  Consoler - 子任务1  fail, times=2, info=
+2017-12-13 22:54:23,922 [3] WARN  Consoler - 子任务1  fail, times=3, info=
+2017-12-13 22:54:25,933 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:54:25,935 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:54:25,937 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:54:28,730 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-13 22:54:34,847 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:54:38,848 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-13 22:54:39,050 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-13 22:54:41,201 [3] WARN  Consoler - 子任务1  fail, times=2, info=
+2017-12-13 22:54:43,274 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:54:43,345 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-13 22:54:45,357 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:54:45,359 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-13 22:54:47,369 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:54:57,465 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:54:57,466 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-13 22:54:59,486 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:54:59,487 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:55:04,975 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:55:08,980 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-13 22:55:09,595 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:55:09,595 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:55:09,597 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-13 22:55:11,608 [3] WARN  Consoler - 父任务  fail, times=2, info=
+2017-12-13 22:55:13,618 [3] WARN  Consoler - 父任务  fail, times=3, info=
+2017-12-13 22:55:15,628 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:55:25,678 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:55:25,679 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-13 22:55:28,956 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-13 22:55:29,312 [3] WARN  Consoler - 子任务2  fail, times=2, info=
+2017-12-13 22:55:31,323 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:55:31,324 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:55:35,165 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:55:39,166 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-13 22:55:41,377 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-13 22:55:43,386 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:55:43,387 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-13 22:55:45,405 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:55:45,406 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-13 22:55:47,419 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:55:57,517 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:55:57,518 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:55:57,519 [3] INFO  Consoler - 父任务  ok
+2017-12-13 22:56:05,306 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:59:49,736 [3] INFO  Consoler - Logger start
+2017-12-13 22:59:49,751 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-13 22:59:53,755 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-13 22:59:56,502 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-13 22:59:56,504 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-13 22:59:56,772 [3] WARN  Consoler - 子任务1  fail, times=2, info=
+2017-12-13 22:59:58,779 [3] INFO  Consoler - 子任务1  ok
+2017-12-13 22:59:58,779 [3] INFO  Consoler - 子任务2  ok
+2017-12-13 22:59:58,780 [3] INFO  Consoler - 父任务  ok

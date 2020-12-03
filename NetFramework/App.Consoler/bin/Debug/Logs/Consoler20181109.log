@@ -1,0 +1,9 @@
+2018-11-09 15:03:11,611 [3] INFO  Consoler - Logger start
+2018-11-09 15:03:11,739 [3] INFO  Consoler - Connect http://www.baidu.com running
+2018-11-09 15:03:12,191 [3] INFO  Consoler - Connect http://www.baidu.com ok
+2018-11-09 15:03:34,791 [3] INFO  Consoler - Connect http://www.baidu.com running
+2018-11-09 15:03:34,809 [3] INFO  Consoler - Connect http://www.baidu.com ok
+2018-11-09 15:04:04,857 [3] INFO  Consoler - Connect http://www.baidu.com running
+2018-11-09 15:04:04,875 [3] INFO  Consoler - Connect http://www.baidu.com ok
+2018-11-09 15:04:34,904 [3] INFO  Consoler - Connect http://www.baidu.com running
+2018-11-09 15:04:34,989 [3] INFO  Consoler - Connect http://www.baidu.com ok

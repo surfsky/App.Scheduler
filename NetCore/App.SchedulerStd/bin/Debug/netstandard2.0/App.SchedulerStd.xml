@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>App.SchedulerStd</name>
+    </assembly>
+    <members>
+        <member name="T:App.Scheduler.Common">
+            <summary>
+            公共方法类
+            </summary>
+        </member>
+        <member name="T:App.Scheduler.DateSpan">
+            <summary>
+            时间差表达式（弃用TimeSpan是因为只能设置天数，且不可以xml序列化）
+            </summary>
+        </member>
+        <member name="T:App.Scheduler.DateSpanConverter">
+            <summary>
+            DateSpan 格式化转化器
+            </summary>
+        </member>
+        <member name="T:App.Scheduler.IJobRunner">
+            <summary>
+            任务运行器接口
+            </summary>
+        </member>
+        <member name="T:App.Scheduler.JobStatus">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="T:App.Scheduler.Job">
+            <summary>
+            任务基类
+            参照 Quartz cron 表达式: https://yq.aliyun.com/articles/62723#_Toc465868115
+            - 顺序调整为：年 月 日 时 分 周
+            - 每个部分可用逗号分隔
+            - 只保留 * 符号
+            </summary>
+        </member>
+        <member name="P:App.Scheduler.Job.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:App.Scheduler.Job.Enable">
+            <summary>是否有效</summary>
+        </member>
+        <member name="P:App.Scheduler.Job.Schedule">
+            <summary>调度表达式。格式为"年 月 日 时 分 周"。如"* * * 8,18, * *"表示每日8点、18点运行</summary>
+        </member>
+        <member name="P:App.Scheduler.Job.Status">
+            <summary>任务完成状态</summary>
+        </member>
+        <member name="P:App.Scheduler.Job.LastRunDt">
+            <summary>最后运行时间</summary>
+        </member>
+        <member name="P:App.Scheduler.Job.Success">
+            <summary>上次成功运行后，再次运行需要的时间间隔</summary>
+        </member>
+        <member name="P:App.Scheduler.Job.Failure">
+            <summary>上次运行失败后，再次运行需要的时间间隔</summary>
+        </member>
+        <member name="P:App.Scheduler.Job.Runner">
+            <summary>运行器的类型(ITaskRunner)</summary>
+        </member>
+        <member name="P:App.Scheduler.Job.Data">
+            <summary>运行参数</summary>
+        </member>
+        <member name="P:App.Scheduler.Job.Dependency">
+            <summary>依赖的前置任务（依赖任务全部完成后，本任务才运行）</summary>
+        </member>
+        <member name="M:App.Scheduler.Job.Run(System.DateTime,System.String)">
+            <summary>真正的任务运行逻辑，供子类实现。IRunner接口成员</summary>
+        </member>
+        <member name="T:App.Scheduler.TypeNameConverter">
+            <summary>
+            Type 名称 Json 转化器，只保留类名和数据集名，不记录数据集版本号
+            </summary>
+        </member>
+        <member name="T:App.Scheduler.JobContext">
+            <summary>任务上下文</summary>
+            <remarks>
+            JobContext.Currrent["db"] = xxx;
+            </remarks>
+        </member>
+        <member name="P:App.Scheduler.JobContext.Current">
+            <summary>当前任务上下文</summary>
+        </member>
+        <member name="M:App.Scheduler.JobContext.RemoveCurrent">
+            <summary>删除当前任务上下文</summary>
+        </member>
+        <member name="T:App.Scheduler.ConnectJob">
+            <summary>连接测试任务</summary>
+        </member>
+        <member name="T:App.Scheduler.DummyJob">
+            <summary>空任务，休眠 n 秒</summary>
+        </member>
+        <member name="T:App.Scheduler.RandomJob">
+            <summary>随机成功任务。可用于模拟测试任务依赖逻辑。</summary>
+        </member>
+        <member name="T:App.Scheduler.ApplicationJob">
+            <summary>应用程序运行任务</summary>
+        </member>
+        <member name="T:App.Scheduler.PerlJob">
+            <summary>Perl脚本任务。请预先配置好Perl程序的目录。</summary>
+        </member>
+        <member name="T:App.Scheduler.PythonJob">
+            <summary>Python脚本任务。请预先配置好Python程序的目录。</summary>
+        </member>
+        <member name="T:App.Scheduler.Schedule">
+            <summary>
+            调度表达式：年 月 日 时 分 周
+            </summary>
+        </member>
+        <member name="M:App.Scheduler.Schedule.InTime(System.DateTime)">
+            <summary>是否处于运行时间</summary>
+        </member>
+        <member name="T:App.Scheduler.ScheduleConverter">
+            <summary>
+            调度表达式格式化转化器
+            </summary>
+        </member>
+        <member name="T:App.Scheduler.ScheduleConfig">
+            <summary>
+            调度的配置信息
+            </summary>
+        </member>
+        <member name="P:App.Scheduler.ScheduleConfig.Sleep">
+            <summary>每次循环休眠毫秒数</summary>
+        </member>
+        <member name="P:App.Scheduler.ScheduleConfig.LogDt">
+            <summary>最后日志时间</summary>
+        </member>
+        <member name="P:App.Scheduler.ScheduleConfig.Jobs">
+            <summary>任务</summary>
+        </member>
+        <member name="T:App.Scheduler.JobDelegate">
+            <summary>任务事件代理</summary>
+            <param name="job">任务对象</param>
+            <param name="info">附加数据</param>
+        </member>
+        <member name="T:App.Scheduler.ScheduleEngine">
+            <summary>
+            Schedule engine
+            </summary>
+        </member>
+        <member name="P:App.Scheduler.ScheduleEngine.Config">
+            <summary>Schedule config</summary>
+        </member>
+        <member name="P:App.Scheduler.ScheduleEngine.SaveSeconds">
+            <summary>The interval seconds for saveing config into file</summary>
+        </member>
+        <member name="E:App.Scheduler.ScheduleEngine.ConfigFailure">
+            <summary>Load config fail event</summary>
+        </member>
+        <member name="E:App.Scheduler.ScheduleEngine.ConfigSave">
+            <summary>Config save event</summary>
+        </member>
+        <member name="E:App.Scheduler.ScheduleEngine.JobStart">
+            <summary>Job starts event</summary>
+        </member>
+        <member name="E:App.Scheduler.ScheduleEngine.JobRunning">
+            <summary>Job running event</summary>
+        </member>
+        <member name="E:App.Scheduler.ScheduleEngine.JobFinish">
+            <summary>Job end event</summary>
+        </member>
+        <member name="M:App.Scheduler.ScheduleEngine.Stop">
+            <summary>停止</summary>
+        </member>
+        <member name="M:App.Scheduler.ScheduleEngine.Start">
+            <summary>运行</summary>
+        </member>
+        <member name="M:App.Scheduler.ScheduleEngine.Process(App.Scheduler.Job,System.DateTime)">
+            <summary>运行任务</summary>
+        </member>
+        <member name="M:App.Scheduler.ScheduleEngine.RunJob(App.Scheduler.Job)">
+            <summary>运行任务</summary>
+        </member>
+        <member name="T:App.Components.Extensions">
+            <summary>
+            一些常用的扩展
+            </summary>
+        </member>
+        <member name="M:App.Components.Extensions.IsNullOrEmpty(System.String)">
+            <summary>字符串是否为空</summary>
+        </member>
+        <member name="M:App.Components.Extensions.IsNullOrEmpty(System.Object)">
+            <summary>对象是否为空或为空字符串</summary>
+        </member>
+        <member name="M:App.Components.Extensions.ToText(System.Object,System.String)">
+            <summary>将可空对象转化为字符串</summary>
+        </member>
+        <member name="M:App.Components.Extensions.ToText(System.Nullable{System.Boolean},System.String,System.String)">
+            <summary>将可空bool对象转化为字符串</summary>
+        </member>
+        <member name="M:App.Components.Extensions.ToIntText(System.Object)">
+            <summary>将可空对象转化为整型字符串</summary>
+        </member>
+        <member name="M:App.Components.Extensions.ToInt32(System.Object)">
+            <summary>将可空对象转化为整型</summary>
+        </member>
+        <member name="M:App.Components.Extensions.ToDateTime(System.Object)">
+            <summary>将可空对象转化为时间类型</summary>
+        </member>
+        <member name="M:App.Components.Extensions.ToCommaString(System.Collections.IEnumerable)">
+            <summary>转化为逗号分隔的字符串</summary>
+        </member>
+        <member name="M:App.Components.Extensions.CastInt(System.Collections.IEnumerable)">
+            <summary>转化为整型列表</summary>
+        </member>
+        <member name="M:App.Components.Extensions.CastString(System.Collections.IEnumerable)">
+            <summary>转化为整型列表</summary>
+        </member>
+        <member name="M:App.Components.Extensions.CastEnum``1(System.Collections.IEnumerable)">
+            <summary>转化为枚举列表</summary>
+        </member>
+        <member name="T:App.Components.HttpHelper">
+            <summary>
+            HTTP 操作相关（GET/POST/...)
+            </summary>
+        </member>
+        <member name="M:App.Components.HttpHelper.GetResponseText(System.Net.HttpWebResponse)">
+            <summary>获取Http响应文本</summary>
+        </member>
+        <member name="M:App.Components.HttpHelper.Get(System.String,System.Net.CookieContainer)">
+            <summary>Get</summary>
+        </member>
+        <member name="T:App.Components.SerializeHelper">
+            <summary>
+            序列化辅助方法
+            </summary>
+        </member>
+        <member name="M:App.Components.SerializeHelper.SaveXml(System.String,System.Object)">
+            <summary>OBJECT -> XML</summary>
+        </member>
+        <member name="M:App.Components.SerializeHelper.LoadXml(System.String,System.Type)">
+            <summary>XML -> OBJECT</summary>
+        </member>
+        <member name="M:App.Components.SerializeHelper.SaveJson(System.String,System.Object,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>OBJECT -> JSON</summary>
+        </member>
+        <member name="M:App.Components.SerializeHelper.LoadJson(System.String,System.Type,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>JSON -> OBJECT</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,254 @@
+2017-12-10 14:08:53,585 [3] INFO  Consoler - Logger start
+2017-12-10 14:08:53,613 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:09:23,240 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:09:53,226 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:10:23,437 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:10:54,356 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:11:23,589 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:11:53,722 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:12:23,753 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:12:54,057 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:13:23,827 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:16:36,759 [3] INFO  Consoler - Logger start
+2017-12-10 14:16:36,779 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:17:25,915 [3] WARN  Consoler - 运行外部程序 Ping www.baidu.com fail, times=1, info=系统找不到指定的文件。
+2017-12-10 14:18:34,341 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:19:40,779 [3] WARN  Consoler - 运行外部程序 Ping www.baidu.com fail, times=1, info=
+2017-12-10 14:19:41,104 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:19:43,933 [3] WARN  Consoler - 运行外部程序 Ping www.baidu.com fail, times=1, info=系统找不到指定的文件。
+2017-12-10 14:20:38,808 [3] INFO  Consoler - Logger start
+2017-12-10 14:20:38,824 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:21:11,067 [3] WARN  Consoler - 运行外部程序 Ping www.baidu.com fail, times=2, info=系统找不到指定的文件。
+2017-12-10 14:21:11,297 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:21:30,044 [3] INFO  Consoler - Logger start
+2017-12-10 14:21:30,057 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:21:48,991 [3] WARN  Consoler - 运行外部程序 notepad.exe fail, times=1, info=在可以确定所请求的信息之前，进程必须退出。
+2017-12-10 14:46:54,667 [3] INFO  Consoler - Logger start
+2017-12-10 14:46:54,679 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:46:54,857 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 14:47:25,259 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:47:54,389 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 14:47:55,375 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:48:25,576 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 14:48:54,564 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 14:48:55,500 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 15:09:41,419 [1] INFO  Consoler - Logger start
+2017-12-10 15:09:41,435 [1] ERROR Consoler - Config check fail
+2017-12-10 15:10:02,467 [1] INFO  Consoler - Logger start
+2017-12-10 15:10:02,480 [1] ERROR Consoler - Config check fail
+2017-12-10 15:10:22,225 [1] INFO  Consoler - Logger start
+2017-12-10 15:10:22,238 [1] ERROR Consoler - Config check fail
+2017-12-10 15:12:39,151 [3] INFO  Consoler - Logger start
+2017-12-10 15:12:39,172 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 15:12:42,813 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 15:12:47,087 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 15:12:47,369 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:12:47,400 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:12:47,401 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:12:57,432 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:12:57,432 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 15:12:59,438 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:12:59,439 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 15:13:01,453 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:13:08,940 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 15:13:11,548 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:13:11,549 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:13:11,549 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:13:21,595 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 15:13:23,605 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:13:23,609 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 15:13:25,617 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:13:25,618 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 15:13:27,625 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:13:37,690 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 15:13:38,833 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 15:13:39,148 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 15:13:39,754 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:13:39,755 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:13:39,755 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:13:49,907 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 15:13:51,923 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:13:51,925 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:13:51,926 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:14:01,937 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:14:01,938 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:14:01,939 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 15:14:03,949 [3] WARN  Consoler - 带依赖的任务  fail, times=2, info=
+2017-12-10 15:14:05,958 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:14:09,259 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 15:14:16,090 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 15:14:18,100 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:14:18,100 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:14:18,103 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 15:14:20,147 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:14:30,152 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:14:30,153 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 15:14:32,162 [3] WARN  Consoler - 子任务2  fail, times=2, info=
+2017-12-10 15:14:34,175 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:14:34,176 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:14:38,872 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 15:14:39,374 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 15:14:44,194 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 15:14:46,314 [3] WARN  Consoler - 子任务1  fail, times=2, info=
+2017-12-10 15:14:48,389 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:14:48,522 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 15:14:50,560 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:14:50,561 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 15:14:52,569 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:15:31,419 [3] INFO  Consoler - Logger start
+2017-12-10 15:15:31,438 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 15:15:31,444 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 15:15:33,052 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:15:33,052 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:15:33,053 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:15:38,290 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 15:15:43,216 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:15:43,217 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:15:43,217 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:17:53,517 [3] INFO  Consoler - Logger start
+2017-12-10 15:17:53,531 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 15:17:53,746 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 15:17:53,748 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 15:17:55,281 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:17:55,290 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 15:17:57,305 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:17:57,305 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 15:28:06,304 [3] INFO  Consoler - Logger start
+2017-12-10 15:28:06,318 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 15:28:24,999 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 15:28:25,005 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 15:28:25,332 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:28:25,359 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 15:28:27,367 [3] WARN  Consoler - 子任务2  fail, times=2, info=
+2017-12-10 15:28:29,373 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 15:28:29,374 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 15:28:36,075 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 15:28:39,487 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 15:28:41,495 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 15:28:41,496 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 19:19:31,782 [3] INFO  Consoler - Logger start
+2017-12-10 19:19:31,802 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 19:20:02,873 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 19:20:02,877 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:20:03,236 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 19:20:03,237 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:20:05,247 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:20:05,248 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:20:05,248 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 19:20:15,308 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:20:17,314 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:20:17,315 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:20:17,316 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 19:20:19,323 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 19:20:29,371 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:20:45,452 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 19:20:45,455 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:20:45,455 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:20:45,455 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 19:20:45,708 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 19:20:45,733 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:20:45,733 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:20:45,733 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 19:20:47,739 [3] WARN  Consoler - 带依赖的任务  fail, times=2, info=
+2017-12-10 19:20:49,745 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 19:22:22,815 [3] INFO  Consoler - Logger start
+2017-12-10 19:22:22,851 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 19:22:26,856 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-10 19:22:32,688 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 19:22:32,690 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:22:32,951 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:22:32,951 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 19:22:34,957 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:22:34,958 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 19:22:36,965 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 19:22:46,999 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:22:49,005 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:22:49,005 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 19:22:51,013 [3] WARN  Consoler - 子任务2  fail, times=2, info=
+2017-12-10 19:22:52,441 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 19:22:56,444 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-10 19:22:56,645 [3] WARN  Consoler - 子任务2  fail, times=3, info=
+2017-12-10 19:22:58,654 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:22:58,654 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 19:23:08,686 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:25:16,251 [3] INFO  Consoler - Logger start
+2017-12-10 19:25:16,266 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 19:25:28,964 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-10 19:25:47,153 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 19:25:47,155 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:25:47,156 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:25:47,157 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 19:25:47,491 [3] INFO  Consoler - 测试网站可连接性 http://www.baidu.com/ ok
+2017-12-10 19:25:51,500 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-10 19:25:51,500 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:25:51,500 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:25:51,500 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 19:25:57,519 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:25:57,519 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:25:57,520 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 19:26:07,539 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:26:07,540 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:26:07,540 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 19:26:46,241 [3] INFO  Consoler - Logger start
+2017-12-10 19:26:46,258 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-10 19:26:50,263 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-10 19:27:12,121 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 19:27:12,123 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:27:12,391 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:27:12,391 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 19:27:14,397 [3] WARN  Consoler - 子任务2  fail, times=2, info=
+2017-12-10 19:27:16,035 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-10 19:27:20,036 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-10 19:27:20,238 [3] WARN  Consoler - 子任务2  fail, times=3, info=
+2017-12-10 19:27:22,244 [3] WARN  Consoler - 子任务2  fail, times=4, info=
+2017-12-10 19:27:22,445 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:27:24,451 [3] WARN  Consoler - 子任务1  fail, times=2, info=
+2017-12-10 19:27:26,460 [3] WARN  Consoler - 子任务1  fail, times=3, info=
+2017-12-10 19:27:28,468 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:27:28,469 [3] WARN  Consoler - 子任务2  fail, times=5, info=
+2017-12-10 19:27:30,475 [3] WARN  Consoler - 子任务2  fail, times=6, info=
+2017-12-10 19:27:32,482 [3] WARN  Consoler - 子任务2  fail, times=7, info=
+2017-12-10 19:27:34,490 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:27:34,491 [3] WARN  Consoler - 带依赖的任务  fail, times=1, info=
+2017-12-10 19:27:36,496 [3] WARN  Consoler - 带依赖的任务  fail, times=2, info=
+2017-12-10 19:27:38,501 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:27:38,502 [3] INFO  Consoler - 带依赖的任务  ok
+2017-12-10 19:28:02,962 [3] INFO  Consoler - Logger start
+2017-12-10 19:28:02,978 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-10 19:28:06,984 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-10 19:28:09,374 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 19:28:09,377 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:28:09,377 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:28:09,379 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-10 19:28:09,657 [3] INFO  Consoler - 父任务  ok
+2017-12-10 19:28:19,689 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:28:21,696 [3] WARN  Consoler - 子任务1  fail, times=2, info=
+2017-12-10 19:28:23,703 [3] WARN  Consoler - 子任务1  fail, times=3, info=
+2017-12-10 19:28:25,711 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:28:25,712 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 19:28:27,719 [3] WARN  Consoler - 子任务2  fail, times=2, info=
+2017-12-10 19:28:29,726 [3] WARN  Consoler - 子任务2  fail, times=3, info=
+2017-12-10 19:28:31,733 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:28:31,734 [3] INFO  Consoler - 父任务  ok
+2017-12-10 19:28:32,757 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-10 19:28:36,759 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-10 19:28:41,773 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:28:41,774 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:28:41,774 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-10 19:28:43,781 [3] INFO  Consoler - 父任务  ok
+2017-12-10 19:28:53,813 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2017-12-10 19:28:55,819 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:28:55,820 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2017-12-10 19:28:57,827 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:28:57,827 [3] INFO  Consoler - 父任务  ok
+2017-12-10 19:29:21,482 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 19:29:21,937 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-10 19:36:41,797 [3] INFO  Consoler - Logger start
+2017-12-10 19:36:41,809 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2017-12-10 19:36:45,813 [3] INFO  Consoler - 睡一会 4 ok
+2017-12-10 19:36:48,458 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2017-12-10 19:36:48,459 [3] INFO  Consoler - 子任务1  ok
+2017-12-10 19:36:48,462 [3] INFO  Consoler - 子任务2  ok
+2017-12-10 19:36:48,463 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2017-12-10 19:36:48,733 [3] WARN  Consoler - 父任务  fail, times=2, info=
+2017-12-10 19:36:50,740 [3] INFO  Consoler - 父任务  ok

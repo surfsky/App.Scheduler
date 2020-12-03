@@ -1,0 +1,168 @@
+2018-11-07 18:12:18,265 [1] INFO  Consoler - Logger start
+2018-11-07 18:12:18,297 [1] ERROR Consoler - Config check fail
+2018-11-07 18:16:38,477 [1] INFO  Consoler - Logger start
+2018-11-07 18:16:38,497 [1] ERROR Consoler - Config check fail
+2018-11-07 18:22:24,042 [1] INFO  Consoler - Logger start
+2018-11-07 18:22:24,067 [1] ERROR Consoler - Config check fail
+2018-11-07 18:24:30,518 [3] INFO  Consoler - Logger start
+2018-11-07 18:24:30,603 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ running
+2018-11-07 18:24:30,991 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2018-11-07 18:24:30,993 [3] INFO  Consoler - 睡一会 4 running
+2018-11-07 18:24:34,996 [3] INFO  Consoler - 睡一会 4 ok
+2018-11-07 18:24:35,002 [3] INFO  Consoler - 运行外部程序 notepad.exe running
+2018-11-07 18:24:39,267 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2018-11-07 18:24:39,909 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:40,093 [3] INFO  Consoler - 子任务1  running
+2018-11-07 18:24:40,115 [3] INFO  Consoler - 子任务1  ok
+2018-11-07 18:24:40,117 [3] INFO  Consoler - 子任务2  running
+2018-11-07 18:24:40,118 [3] INFO  Consoler - 子任务2  ok
+2018-11-07 18:24:40,119 [3] INFO  Consoler - 父任务  ok
+2018-11-07 18:24:40,502 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:40,516 [3] INFO  Consoler - 子任务1  running
+2018-11-07 18:24:40,519 [3] INFO  Consoler - 子任务1  ok
+2018-11-07 18:24:40,527 [3] INFO  Consoler - 子任务2  running
+2018-11-07 18:24:40,540 [3] INFO  Consoler - 子任务2  ok
+2018-11-07 18:24:40,552 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2018-11-07 18:24:42,530 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:42,601 [3] WARN  Consoler - 父任务  fail, times=2, info=
+2018-11-07 18:24:44,723 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:44,822 [3] WARN  Consoler - 父任务  fail, times=3, info=
+2018-11-07 18:24:46,877 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:46,878 [3] INFO  Consoler - 父任务  ok
+2018-11-07 18:24:57,039 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:57,046 [3] INFO  Consoler - 子任务1  running
+2018-11-07 18:24:57,047 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2018-11-07 18:24:57,260 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:57,468 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:57,681 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:58,047 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:58,281 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:58,485 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:58,688 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:58,899 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:59,105 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:59,108 [3] INFO  Consoler - 子任务1  running
+2018-11-07 18:24:59,110 [3] WARN  Consoler - 子任务1  fail, times=2, info=
+2018-11-07 18:24:59,313 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:59,560 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:24:59,878 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:00,090 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ running
+2018-11-07 18:25:00,157 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2018-11-07 18:25:00,159 [3] INFO  Consoler - 睡一会 4 running
+2018-11-07 18:25:04,165 [3] INFO  Consoler - 睡一会 4 ok
+2018-11-07 18:25:04,172 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:04,376 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:04,378 [3] INFO  Consoler - 子任务1  running
+2018-11-07 18:25:04,380 [3] INFO  Consoler - 子任务1  ok
+2018-11-07 18:25:04,381 [3] INFO  Consoler - 子任务2  running
+2018-11-07 18:25:04,383 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2018-11-07 18:25:04,585 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:04,824 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:05,051 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:05,310 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:05,531 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:05,843 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:06,046 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:06,249 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:06,453 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:06,458 [3] INFO  Consoler - 子任务2  running
+2018-11-07 18:25:06,460 [3] WARN  Consoler - 子任务2  fail, times=2, info=
+2018-11-07 18:25:06,668 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:06,874 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:07,103 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:07,307 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:07,531 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:07,840 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:08,043 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:08,283 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:08,487 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:08,494 [3] INFO  Consoler - 子任务2  running
+2018-11-07 18:25:08,496 [3] INFO  Consoler - 子任务2  ok
+2018-11-07 18:25:08,502 [3] WARN  Consoler - 父任务  fail, times=1, info=
+2018-11-07 18:25:10,605 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:10,607 [3] WARN  Consoler - 父任务  fail, times=2, info=
+2018-11-07 18:25:12,658 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:12,661 [3] WARN  Consoler - 父任务  fail, times=3, info=
+2018-11-07 18:25:14,758 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:14,760 [3] INFO  Consoler - 子任务1  running
+2018-11-07 18:25:14,763 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2018-11-07 18:25:14,968 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:15,171 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:15,374 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:15,600 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:15,991 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:16,234 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:16,437 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:16,640 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:16,848 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:16,851 [3] INFO  Consoler - 子任务1  running
+2018-11-07 18:25:16,852 [3] INFO  Consoler - 子任务1  ok
+2018-11-07 18:25:16,854 [3] WARN  Consoler - 父任务  fail, times=4, info=
+2018-11-07 18:25:18,924 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:18,928 [3] INFO  Consoler - 子任务2  running
+2018-11-07 18:25:18,930 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2018-11-07 18:25:19,133 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:19,336 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:19,564 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:19,912 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:20,116 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:20,319 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:20,539 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:20,745 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:20,949 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:20,951 [3] INFO  Consoler - 子任务2  running
+2018-11-07 18:25:20,954 [3] INFO  Consoler - 子任务2  ok
+2018-11-07 18:25:20,956 [3] INFO  Consoler - 父任务  ok
+2018-11-07 18:25:30,206 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ running
+2018-11-07 18:25:30,257 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2018-11-07 18:25:30,260 [3] INFO  Consoler - 睡一会 4 running
+2018-11-07 18:25:34,270 [3] INFO  Consoler - 睡一会 4 ok
+2018-11-07 18:25:34,272 [3] INFO  Consoler - 运行外部程序 notepad.exe running
+2018-11-07 18:25:37,943 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2018-11-07 18:25:38,499 [3] INFO  Consoler - 父任务  running
+2018-11-07 18:25:38,502 [3] INFO  Consoler - 子任务1  running
+2018-11-07 18:25:38,504 [3] INFO  Consoler - 子任务1  ok
+2018-11-07 18:25:38,506 [3] INFO  Consoler - 子任务2  running
+2018-11-07 18:25:38,511 [3] INFO  Consoler - 子任务2  ok
+2018-11-07 18:25:38,513 [3] INFO  Consoler - 父任务  ok
+2018-11-07 19:03:15,026 [3] INFO  Consoler - Logger start
+2018-11-07 19:03:15,316 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ running
+2018-11-07 19:03:15,673 [3] INFO  Consoler - 连接网站 http://www.baidu.com/ ok
+2018-11-07 19:03:15,674 [3] INFO  Consoler - 睡一会 4 running
+2018-11-07 19:03:19,677 [3] INFO  Consoler - 睡一会 4 ok
+2018-11-07 19:03:19,701 [3] INFO  Consoler - 运行外部程序 notepad.exe running
+2018-11-07 19:03:23,343 [3] INFO  Consoler - 运行外部程序 notepad.exe ok
+2018-11-07 19:03:23,456 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:23,457 [3] INFO  Consoler - 子任务1  running
+2018-11-07 19:03:23,462 [3] INFO  Consoler - 子任务1  ok
+2018-11-07 19:03:23,463 [3] INFO  Consoler - 子任务2  running
+2018-11-07 19:03:23,464 [3] INFO  Consoler - 子任务2  ok
+2018-11-07 19:03:23,466 [3] INFO  Consoler - 父任务  ok
+2018-11-07 19:03:24,126 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:24,150 [3] INFO  Consoler - 子任务1  running
+2018-11-07 19:03:24,155 [3] WARN  Consoler - 子任务1  fail, times=1, info=
+2018-11-07 19:03:24,381 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:24,612 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:25,236 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:25,438 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:25,641 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:25,850 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:26,057 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:26,260 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:26,261 [3] INFO  Consoler - 子任务1  running
+2018-11-07 19:03:26,262 [3] INFO  Consoler - 子任务1  ok
+2018-11-07 19:03:26,263 [3] INFO  Consoler - 子任务2  running
+2018-11-07 19:03:26,264 [3] WARN  Consoler - 子任务2  fail, times=1, info=
+2018-11-07 19:03:26,483 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:26,744 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:26,955 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:27,166 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:27,372 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:27,575 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:27,780 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:27,983 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:28,188 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:28,390 [3] INFO  Consoler - 父任务  running
+2018-11-07 19:03:28,394 [3] INFO  Consoler - 子任务2  running
+2018-11-07 19:03:28,395 [3] INFO  Consoler - 子任务2  ok
+2018-11-07 19:03:28,400 [3] INFO  Consoler - 父任务  ok
