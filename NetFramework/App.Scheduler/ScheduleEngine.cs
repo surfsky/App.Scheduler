@@ -11,6 +11,7 @@ namespace App.Scheduler
     /// <summary>任务事件代理</summary>
     /// <param name="job">任务对象</param>
     /// <param name="info">附加数据</param>
+    /// <param name="success">是否成功</param>
     public delegate void JobDelegate(Job job, string info, bool success);
 
     /// <summary>
@@ -84,7 +85,7 @@ namespace App.Scheduler
         public void Start()
         {
             // 读取配置文件
-            if (!_configFile.IsNullOrEmpty())
+            if (!_configFile.IsEmpty())
             {
                 try
                 {

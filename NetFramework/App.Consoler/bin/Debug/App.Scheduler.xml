@@ -71,6 +71,12 @@
         <member name="P:App.Scheduler.Job.Dependency">
             <summary>依赖的前置任务（依赖任务全部完成后，本任务才运行）</summary>
         </member>
+        <member name="M:App.Scheduler.Job.#ctor">
+            <summary>构建任务</summary>
+        </member>
+        <member name="M:App.Scheduler.Job.#ctor(System.String,System.String,System.String,App.Scheduler.DateSpan,App.Scheduler.DateSpan)">
+            <summary>构建任务</summary>
+        </member>
         <member name="M:App.Scheduler.Job.Run(System.DateTime,System.String)">
             <summary>真正的任务运行逻辑，供子类实现。IRunner接口成员</summary>
         </member>
@@ -111,8 +117,26 @@
         </member>
         <member name="T:App.Scheduler.Schedule">
             <summary>
-            调度表达式：年 月 日 时 分 周
+            调度表达式：年 月 日 时 分 秒 周
             </summary>
+        </member>
+        <member name="M:App.Scheduler.Schedule.#ctor">
+            <summary>构建调度表达式</summary>
+        </member>
+        <member name="M:App.Scheduler.Schedule.#ctor(System.String)">
+            <summary>构建调度表达式</summary>
+            <param name="expression">格式如：年 月 日 时 分 秒 周</param>
+            <example>
+            * * 1 0 0 0 *       表示每月 1 日 0 点 0 分启动任务
+            * * * 0,12 0 0 *    表示每天 0 点和 12 点启动任务
+            * * * 0 0 0 1       表示每周一 0 点启动任务
+            </example>
+        </member>
+        <member name="M:App.Scheduler.Schedule.#ctor(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.DayOfWeek})">
+            <summary>构建调度表达式</summary>
+        </member>
+        <member name="M:App.Scheduler.Schedule.ToString">
+            <summary>转化为字符串</summary>
         </member>
         <member name="M:App.Scheduler.Schedule.InTime(System.DateTime)">
             <summary>是否处于运行时间</summary>
@@ -140,6 +164,7 @@
             <summary>任务事件代理</summary>
             <param name="job">任务对象</param>
             <param name="info">附加数据</param>
+            <param name="success">是否成功</param>
         </member>
         <member name="T:App.Scheduler.ScheduleEngine">
             <summary>
@@ -187,11 +212,14 @@
             一些常用的扩展
             </summary>
         </member>
-        <member name="M:App.Components.Extensions.IsNullOrEmpty(System.String)">
+        <member name="M:App.Components.Extensions.IsEmpty(System.String)">
             <summary>字符串是否为空</summary>
         </member>
-        <member name="M:App.Components.Extensions.IsNullOrEmpty(System.Object)">
+        <member name="M:App.Components.Extensions.IsEmpty(System.Object)">
             <summary>对象是否为空或为空字符串</summary>
+        </member>
+        <member name="M:App.Components.Extensions.IsEmpty``1(System.Collections.Generic.List{``0})">
+            <summary>列表是否为空</summary>
         </member>
         <member name="M:App.Components.Extensions.ToText(System.Object,System.String)">
             <summary>将可空对象转化为字符串</summary>

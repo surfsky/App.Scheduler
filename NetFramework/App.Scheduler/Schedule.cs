@@ -7,29 +7,39 @@ using App.Components;
 namespace App.Scheduler
 {
     /// <summary>
-    /// 调度表达式：年 月 日 时 分 周
+    /// 调度表达式：年 月 日 时 分 秒 周
     /// </summary>
     [JsonConverter(typeof(ScheduleConverter))]
     public class Schedule
     {
-        // 年月日时分秒周
-        [JsonIgnore] public List<int> Years { get; set; } = new List<int>();
-        [JsonIgnore] public List<int> Months { get; set; } = new List<int>();
-        [JsonIgnore] public List<int> Days { get; set; } = new List<int>();
-        [JsonIgnore] public List<int> Hours { get; set; } = new List<int>();
-        [JsonIgnore] public List<int> Minutes { get; set; } = new List<int>();
-        [JsonIgnore] public List<DayOfWeek> WeekDays { get; set; } = new List<DayOfWeek>();
-
         string _expression;
 
-        //
+        // 年月日时分秒周
+        [JsonIgnore] public List<int> Years   { get; set; } = new List<int>();
+        [JsonIgnore] public List<int> Months  { get; set; } = new List<int>();
+        [JsonIgnore] public List<int> Days    { get; set; } = new List<int>();
+        [JsonIgnore] public List<int> Hours   { get; set; } = new List<int>();
+        [JsonIgnore] public List<int> Minutes { get; set; } = new List<int>();
+        [JsonIgnore] public List<int> Seconds { get; set; } = new List<int>();
+        [JsonIgnore] public List<DayOfWeek> WeekDays { get; set; } = new List<DayOfWeek>();
+
+
+        /// <summary>构建调度表达式</summary>
         public Schedule() { }
+
+        /// <summary>构建调度表达式</summary>
+        /// <param name="expression">格式如：年 月 日 时 分 秒 周</param>
+        /// <example>
+        /// * * 1 0 0 0 *       表示每月 1 日 0 点 0 分启动任务
+        /// * * * 0,12 0 0 *    表示每天 0 点和 12 点启动任务
+        /// * * * 0 0 0 1       表示每周一 0 点启动任务
+        /// </example>
         public Schedule(string expression)
         {
-            if (expression.IsNullOrEmpty())
+            if (expression.IsEmpty())
                 return;
             var parts = expression.Trim().Split(' ');
-            if (parts.Length != 6)
+            if (parts.Length != 7)
                 return;
 
             this._expression = expression;
@@ -38,10 +48,26 @@ namespace App.Scheduler
             this.Days     = parts[2] == "*" ? new List<int>() : parts[2].Split(',').CastInt();
             this.Hours    = parts[3] == "*" ? new List<int>() : parts[3].Split(',').CastInt();
             this.Minutes  = parts[4] == "*" ? new List<int>() : parts[4].Split(',').CastInt();
-            this.WeekDays = parts[5] == "*" ? new List<DayOfWeek>() : parts[5].Split(',').CastEnum<DayOfWeek>();
+            this.Seconds  = parts[5] == "*" ? new List<int>() : parts[5].Split(',').CastInt();
+            this.WeekDays = parts[6] == "*" ? new List<DayOfWeek>() : parts[6].Split(',').CastEnum<DayOfWeek>();
         }
 
-        // 转化为字符串
+        /// <summary>构建调度表达式</summary>
+        Schedule(
+            List<int> years = null, List<int> months = null, List<int> days = null,
+            List<int> hours = null, List<int> minutes = null, List<int> seconds = null, 
+            List<DayOfWeek> weekdays=null)
+        {
+            this.Years = years;
+            this.Months = months;
+            this.Days = days;
+            this.Hours = hours;
+            this.Minutes = minutes;
+            this.Seconds = seconds;
+            this.WeekDays = weekdays;
+        }
+
+        /// <summary>转化为字符串</summary>
         public override string ToString()
         {
             return this._expression;
@@ -50,12 +76,13 @@ namespace App.Scheduler
         /// <summary>是否处于运行时间</summary>
         public bool InTime(DateTime dt)
         {
-            if (this.Years.Count == 0 || this.Years.Contains(dt.Year))
-                if (this.Months.Count == 0 || this.Months.Contains(dt.Month))
-                    if (this.Days.Count == 0 || this.Days.Contains(dt.Day))
-                        if (this.Hours.Count == 0 || this.Hours.Contains(dt.Hour))
-                            if (this.Minutes.Count == 0 || this.Minutes.Contains(dt.Minute))
-                                if (this.WeekDays.Count == 0 || this.WeekDays.Contains(dt.DayOfWeek))
+            if (this.Years.IsEmpty() || this.Years.Contains(dt.Year))
+                if (this.Months.IsEmpty() || this.Months.Contains(dt.Month))
+                    if (this.Days.IsEmpty() || this.Days.Contains(dt.Day))
+                        if (this.Hours.IsEmpty() || this.Hours.Contains(dt.Hour))
+                            if (this.Minutes.IsEmpty() || this.Minutes.Contains(dt.Minute))
+                                if (this.Seconds.IsEmpty() || this.Seconds.Contains(dt.Second))
+                                    if (this.WeekDays.IsEmpty() || this.WeekDays.Contains(dt.DayOfWeek))
                                     return true;
             return false;
         }
@@ -65,7 +92,7 @@ namespace App.Scheduler
     /// <summary>
     /// 调度表达式格式化转化器
     /// </summary>
-    public class ScheduleConverter : JsonConverter
+    internal class ScheduleConverter : JsonConverter
     {
         public override bool CanConvert(Type objectType)
         {

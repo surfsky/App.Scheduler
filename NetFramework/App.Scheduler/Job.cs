@@ -88,10 +88,12 @@ namespace App.Scheduler
         //-------------------------------------------
         // 构造函数
         //-------------------------------------------
+        /// <summary>构建任务</summary>
         public Job()
         {
             this.Runner = this.GetType();
         }
+        /// <summary>构建任务</summary>
         public Job(string id, string name, string schedule, DateSpan interval, DateSpan failure=null)
         {
             this.ID = id;

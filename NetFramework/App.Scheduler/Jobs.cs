@@ -27,7 +27,7 @@ namespace App.Scheduler
     {
         public bool Run(DateTime dt, string data)
         {
-            int seconds = data.IsNullOrEmpty() ? 1 : int.Parse(data);
+            int seconds = data.IsEmpty() ? 1 : int.Parse(data);
             Thread.Sleep(seconds*1000);
             return true;
         }

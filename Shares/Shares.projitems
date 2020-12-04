@@ -8,17 +8,4 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>Shares</Import_RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Common.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\Extensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\HttpHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\SerializeHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DateSpan.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Job.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)JobContext.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Jobs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Schedule.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ScheduleConfig.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ScheduleEngine.cs" />
-  </ItemGroup>
 </Project>

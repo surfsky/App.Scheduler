@@ -91,7 +91,8 @@ namespace App.Consoler
                 Data = "http://www.baidu.com",
                 Success = new DateSpan(0, 0, 0, 0, 0, 2),
                 Failure = new DateSpan(0, 0, 0, 0, 0, 0, 0, 9),
-                Schedule = new Schedule("* * * * * *")
+                Schedule = new Schedule("* * * * * * *")
+                //Schedule = new Schedule(days: new List<int> { 1 })
             });
             /*
             cfg.Jobs.Add(new Job()
