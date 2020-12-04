@@ -173,14 +173,6 @@ static ScheduleEngine CreateEngine()
     });
     return new ScheduleEngine(cfg);
 }
-
-/// <summary>从配置中构建引擎对象</summary>
-private static ScheduleEngine CreateEngineFromConfig()
-{
-    var folder = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
-    string configFile = string.Format("{0}\\scheduler.config", folder);
-    return new ScheduleEngine(configFile);
-}
 ```
 
 ## 8. 数据库上下文如何处理
@@ -196,7 +188,6 @@ private static ScheduleEngine CreateEngineFromConfig()
 
 ``` csharp
 
-UtilConfig.Instance.MachineId = IO.GetAppSetting<int>("MachineID");
 EntityConfig.Instance.OnGetDb += () => JobContext.Current["db"] as AppContext;
 var engine = CreateEngine();
 engine.JobRunning += (job, info, _) =>

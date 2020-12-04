@@ -77,6 +77,9 @@
         <member name="M:App.Scheduler.Job.#ctor(System.String,System.String,System.String,App.Scheduler.DateSpan,App.Scheduler.DateSpan)">
             <summary>构建任务</summary>
         </member>
+        <member name="M:App.Scheduler.Job.#ctor(System.Type,System.String,App.Scheduler.DateSpan,App.Scheduler.DateSpan)">
+            <summary>构建任务</summary>
+        </member>
         <member name="M:App.Scheduler.Job.Run(System.DateTime,System.String)">
             <summary>真正的任务运行逻辑，供子类实现。IRunner接口成员</summary>
         </member>
@@ -131,9 +134,6 @@
             * * * 0,12 0 0 *    表示每天 0 点和 12 点启动任务
             * * * 0 0 0 1       表示每周一 0 点启动任务
             </example>
-        </member>
-        <member name="M:App.Scheduler.Schedule.#ctor(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.DayOfWeek})">
-            <summary>构建调度表达式</summary>
         </member>
         <member name="M:App.Scheduler.Schedule.ToString">
             <summary>转化为字符串</summary>
@@ -235,6 +235,9 @@
         </member>
         <member name="M:App.Components.Extensions.ToDateTime(System.Object)">
             <summary>将可空对象转化为时间类型</summary>
+        </member>
+        <member name="M:App.Components.Extensions.ToList``1(``0[])">
+            <summary>转化为列表</summary>
         </member>
         <member name="M:App.Components.Extensions.ToCommaString(System.Collections.IEnumerable)">
             <summary>转化为逗号分隔的字符串</summary>

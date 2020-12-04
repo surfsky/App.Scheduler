@@ -103,6 +103,16 @@ namespace App.Scheduler
             this.Failure = failure ?? new DateSpan(0, 0, 0, 0, 0, 0, 0, 0);
             this.Runner = this.GetType();
         }
+        /// <summary>构建任务</summary>
+        public Job(Type  runnerType, string schedule, DateSpan success, DateSpan failure = null)
+        {
+            this.Runner = runnerType;
+            this.Name = runnerType.Name;
+            this.Schedule = new Schedule(schedule);
+            this.Success = success;
+            this.Failure = failure ?? new DateSpan(0, 0, 0, 0, 0, 0, 0, 0);
+            this.Runner = this.GetType();
+        }
 
 
         //-------------------------------------------

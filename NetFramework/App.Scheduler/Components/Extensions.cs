@@ -67,6 +67,16 @@ namespace App.Components
             return o == null ? new DateTime() : DateTime.Parse(o.ToString());
         }
 
+        /// <summary>转化为列表</summary>
+        public static List<T> ToList<T>(this T[] source)
+        {
+            var result = new List<T>();
+            foreach (var item in source)
+                result.Add(item);
+            return result;
+        }
+
+
         /// <summary>转化为逗号分隔的字符串</summary>
         public static string ToCommaString(this IEnumerable source)
         {
